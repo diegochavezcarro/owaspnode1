@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Contar con una variable global.</p>
+<button type="button" onclick="myFunction()">Count!</button>
+<p id="demo">0</p>
+<script>
+var counter = 0;
+function add() {
+    return counter += 1;
+}
+add();
+add();
+add(); //el contador es igual a 3
+function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+}
+</script>
+</body>
+</html>

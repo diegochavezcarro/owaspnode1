@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<p id="demo4"></p>
+	<p id="demo5"></p>
+	<script>
+		"use strict";
+		function mostrarvariable(tag, variable){
+			document.getElementById(tag).innerHTML = "variable es de tipo: " + typeof variable;
+		}
+		var variable;
+		variable="Dieguito";
+		mostrarvariable("demo1", variable); //muestra string
+		variable= 3.14;
+		mostrarvariable("demo2", variable); //muestra number
+		variable= false;   
+		mostrarvariable("demo3", variable); //muestra boolean            
+		variable= [1,2,3,4]; 
+		mostrarvariable("demo4", variable); //muestra object       
+		variable= {name:'John', age:34}; 
+		mostrarvariable("demo5", variable); //muestra object
+	</script>
+</body>
+</html>

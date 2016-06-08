@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pagina Web</title>
+	<script type="text/javascript" src="codigo.js">
+	</script>
+	<script>
+		function agregardom(){
+			document.getElementById("nuevodom").innerHTML = "<p>Hello World!</p>";
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<h1>Hola</h1>
+	<p>Ir a otra pagina:</p>
+	<a href="prueba.html">Ir a otra pagina</a>
+	<p>Presione el boton para ejecutar javascript</p>
+
+	<input type="button" value="Mostrar Mensaje" onclick="mostrarmensaje()"></input>
+	<input type="button" value="Agregar Elemento" onclick="agregardom()"></input>
+	<div id="nuevodom"></div>
+</body>
+</html>

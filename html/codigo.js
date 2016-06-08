@@ -1,0 +1,4 @@
+
+function mostrarmensaje(){
+	alert("Hola!");
+}

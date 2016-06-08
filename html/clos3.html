@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Contar con una funcion anidada.</p>
+<p id="demo">0</p>
+<script>
+document.getElementById("demo").innerHTML = add();
+function add() {
+    var counter = 0;
+    function plus() {counter += 1;}
+    plus();    
+    return counter; 
+}
+</script>
+</body>
+</html>

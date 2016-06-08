@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ pagename }}</title>
+</head>
+<body>
+	<h1>{{ pagename }}</h1>
+	<ul>
+	{% for author in authors %}
+  	<li{% if loop.first %} style="color:blue;" {% endif %}>
+    	{{ author }}
+  	</li>
+	{% endfor %}
+</ul>
+</body>
+</html>
