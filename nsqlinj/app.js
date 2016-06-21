@@ -14,6 +14,8 @@ MongoClient.connect(url, function (err, db) {
   app.post('/login', function (req, res) {
     var userName = req.body.user;
     var password = req.body.pass;
+    console.log(userName);
+    console.log(password);
     db.collection("usuarios").findOne({"userName": userName, "password": password},
     //db.collection("usuarios").findOne({userName: { $in: [userName] }, password: { $in: [password] }}, 
       function (err, user) {

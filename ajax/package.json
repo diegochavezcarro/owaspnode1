@@ -9,6 +9,7 @@
   "author": "dchavez",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.13.4",
     "path": "^0.12.7"
   }
 }
