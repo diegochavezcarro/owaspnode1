@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<header>
+</header>
+<body>
+<script>
+function Prefixer(prefix) {
+    this.prefix = prefix;
+}
+Prefixer.prototype.prefixArray = function (arr) { 
+    //'use strict';
+    var that = this; 
+    return arr.map(function (x) { 
+        return that.prefix + x; 
+    });
+};
+var pre = new Prefixer('Hi ');
+console.log(pre.prefixArray(['Joe', 'Alex']));
+</script>
+</body>

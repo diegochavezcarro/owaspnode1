@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<header>
+</header>
+<body>
+<script>
+class Prefixer {
+    constructor(prefix) {
+        this.prefix = prefix;
+    }
+    prefixArray(arr) {
+        return arr.map(x => this.prefix + x); 
+    }
+}
+var pre = new Prefixer('Hi ');
+console.log(pre.prefixArray(['Joe', 'Alex']));
+</script>
+</body>
