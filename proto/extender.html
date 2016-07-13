@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Objetos</title>
+ <meta charset="UTF-8">
+	<script>
+		function Persona(nombrePersona){  
+			this.nombre = nombrePersona;
+			this.info = 'Esta persona se llama ' + this.nombre;  
+			this.mostrarInfo = function(){  
+				alert(this.info);  
+			}
+		}  
+		var persona1 = new Persona('Adán');
+		var persona2 = new Persona('Eva');
+		Persona.prototype.decirHola = function() {
+			alert(this.nombre + " dice Hola");
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="Mostrar Info Adán" onclick="persona1.mostrarInfo()" />
+	<input type="button" value="Mostrar Info Eva" onclick="persona2.mostrarInfo()" />
+	<input type="button" value="Adán dice Hola" onclick="persona1.decirHola()" />
+	<input type="button" value="Eva dice Hola" onclick="persona2.decirHola()" />
+</body>
+</html>

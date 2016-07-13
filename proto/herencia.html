@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Objetos</title>
+  <meta charset="UTF-8">
+  <script>      
+       function Domestico() {
+           this.animal = "";
+           this.nombre= "";
+           this.configurarAnimal = function(nuevoAnimal) {
+             this.animal = nuevoAnimal;
+           }
+           this.configurarNombre= function(nuevoNombre) {
+             this.nombre = nuevoNombre;
+           }
+        }
+        Perro.prototype = new Domestico(); 
+        function Perro() {
+          this.raza = "";
+          this.configurarRaza = function(nuevaRaza) {
+            this.raza = nuevaRaza;
+          }
+          this.mostrarInfo = function(){  
+				    alert(this.nombre + " es un " + this.raza); 
+			    }         
+        }
+        var miPerro = new Perro();
+        miPerro.configurarNombre("Toby");
+        miPerro.configurarRaza("San Bernardo");
+        var miGato = new Domestico();
+        miGato.configurarAnimal("gato");
+        miGato.configurarNombre("Silvestre");
+
+	</script>
+</head>
+
+<body>
+  <input type="button" value="Mostrar Info Perro" onclick="miPerro.mostrarInfo()" />
+
+</body>
+
+</html>
