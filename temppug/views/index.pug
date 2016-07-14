@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+	head
+	title= pagename
+	body
+	h1 #{pagename}
+	ul
+		each author, index in authors
+			if index==0
+				li(style={color: 'blue'})= author
+			else
+				li= author

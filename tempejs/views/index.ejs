@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= pagename %></title>
+</head>
+<body>
+	<h1><%= pagename %></h1>
+	<ul>
+	<% authors.forEach(function(author, i) { %>
+  	<li <% if(i==0){ %> style="color:blue;" <% } %> >
+    	<%= author %>
+  	</li>
+	<% }); %>
+</ul>
+</body>
+</html>
