@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "passport": "registry:dt/passport#0.2.0+20160317120654"
+  }
+}
