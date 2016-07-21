@@ -1,5 +1,5 @@
 {
-  "name": "holanode",
+  "name": "accesomongoose",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,6 @@
   "author": "dchavez",
   "license": "ISC",
   "dependencies": {
-    "q": "^1.4.1"
+    "mongoose": "^4.5.3"
   }
 }

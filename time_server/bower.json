@@ -1,0 +1,21 @@
+{
+  "name": "time_server",
+  "authors": [
+    "diegochavezcarro <diegochavezcarro@gmail.com>"
+  ],
+  "description": "",
+  "main": "server.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io-client": "^1.4.5"
+  }
+}

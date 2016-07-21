@@ -23,4 +23,4 @@ report*.html
 .vscode/**
 
 # Bower
-bower_components/**
+bower_components
