@@ -9,7 +9,6 @@
   "author": "dchavez",
   "license": "ISC",
   "dependencies": {
-    "assert": "^1.4.1",
     "mongodb": "^2.2.0"
   }
 }
