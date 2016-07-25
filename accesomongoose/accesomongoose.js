@@ -4,7 +4,6 @@ mongoose.connect('mongodb://localhost:27017/blog', function (err) {
 });
 
 //Load mongodb model schema
-var Post = require('./modelo/post');
 var User = require('./modelo/user');
 
 function mostrarUsuarios() {
