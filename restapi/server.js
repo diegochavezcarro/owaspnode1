@@ -29,7 +29,7 @@ router.get('/', function(req, res) {
 // ----------------------------------------------------
 router.route('/personas')
 
-	// crear unaa persona (POST http://localhost:8080/personas)
+	// crear unaa persona (POST http://localhost:8080/api/personas)
 	.post(function(req, res) {
 		
 		var persona = new Persona();		
