@@ -14,7 +14,7 @@ test.describe('Google Search', function () {
     });*/
 
     test.it('se fija si aparece la palabra en la busqueda', function () {
-        this.timeout(7000);
+        this.timeout(10000);
         var driver = new webdriver.Builder().
             withCapabilities(webdriver.Capabilities.chrome()).
             build();
@@ -30,12 +30,12 @@ test.describe('Google Search', function () {
         var driver = new webdriver.Builder().
             withCapabilities(webdriver.Capabilities.chrome()).
             build();
-        this.timeout(7000);
+        this.timeout(10000);
         driver.get('http://www.google.com');
         var searchBox = driver.findElement(webdriver.By.name('q'));
         searchBox.sendKeys('webdriver');
         driver.findElement(webdriver.By.name('btnG')).click();
-        driver.wait(webdriver.until.titleContains('webdriver'), 3000);
+        driver.wait(webdriver.until.titleContains('webdriver'), 5000);
         driver.quit();
     });
 
