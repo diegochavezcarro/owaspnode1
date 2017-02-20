@@ -32,7 +32,7 @@ app.post('/login', function (req, res) {
     var sql = "SELECT * FROM users WHERE username = '" + user + "' AND password = '" + pass + "'";
     //var sql  = "SELECT * FROM users WHERE username = ? AND password = ?";
     console.log(sql);
-    //connection.query(sql, function (err, rows) {
+    connection.query(sql, function (err, rows) {
     connection.query(sql, [user, pass], function (err, rows) {
         if (err) {
             res.json(err);
