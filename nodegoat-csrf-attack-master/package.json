@@ -1,0 +1,13 @@
+{
+  "name": "nodegoat-csrf-example",
+  "version": "0.0.1",
+  "description": "An example mailicious page used by an attacker for CSRF attack",
+  "main": "server.js",
+  "repository": "",
+  "dependencies": {
+    "consolidate": "^0.10.0",
+    "express": "~3.2.4",
+    "forever": "^0.13.0",
+    "handlebars": "^2.0.0"
+  }
+}
