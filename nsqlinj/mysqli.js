@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.post('/login', function (req, res) {
-    var user = req.body.user;
+    var user = eval(req.body.user);
     var pass = req.body.pass;
     //var user = connection.escape(req.body.user);
     //var pass = connection.escape(req.body.pass);
