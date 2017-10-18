@@ -34,7 +34,8 @@ test.describe('Google Search', function () {
         driver.get('http://www.google.com');
         var searchBox = driver.findElement(webdriver.By.name('q'));
         searchBox.sendKeys('webdriver');
-        driver.findElement(webdriver.By.name('btnG')).click();
+        searchBox.submit();
+
         driver.wait(webdriver.until.titleContains('webdriver'), 5000);
         driver.quit();
     });
