@@ -7,8 +7,10 @@ var driver = new webdriver.Builder()
     .build();
 
 driver.get('http://www.google.com/ncr');
-driver.findElement(By.name('q')).sendKeys('webdriver');
-driver.findElement(By.name('btnG')).click();
+var q= driver.findElement(By.name('q'));
+q.sendKeys('webdriver');
+q.submit();
+
 driver.wait(until.titleIs('webdriver - Google Search'), 3000);
 driver.quit();
 
