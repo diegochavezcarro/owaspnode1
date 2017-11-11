@@ -40,7 +40,7 @@ app.post('/login', function (req, res) {
         else if (rows.length) {
             res.json("Login correcto para usuario: ");
         } else {
-            res.json("Login incorrecto!!");
+            res.end(user + " Login incorrecto!!");
         }
     });
 });
