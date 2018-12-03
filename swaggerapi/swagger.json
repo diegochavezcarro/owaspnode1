@@ -1,0 +1,159 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API de Personas",
+    "description": "Ejemplo de API con Swagger",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "Personas",
+      "description": "API para acceder a las Personas en el sistema"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/personas": {
+      "post": {
+        "tags": [
+          "Personas"
+        ],
+        "summary": "Crear una nueva persona en el sistema",
+        "description": "Crear una nueva persona en el sistema",
+        "parameters": [
+          {
+            "name": "persona",
+            "in": "body",
+            "description": "Persona que se quiere crear",
+            "schema": {
+              "$ref": "#/definitions/Persona"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Nueva Persona ha sido creada",
+            "schema": {
+              "$ref": "#/definitions/Persona"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Personas"
+        ],
+        "summary": "Obtener todas las personas en el sistema",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Personas"
+            }
+          }
+        }
+      }
+    },
+    "/personas/{personaId}": {
+      "parameters": [
+        {
+          "name": "personaId",
+          "in": "path",
+          "required": true,
+          "description": "ID de la persona",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Personas"
+        ],
+        "summary": "Obtener Persona con un dado ID",
+        "responses": {
+          "200": {
+            "description": "Persona encontrada",
+            "schema": {
+              "$ref": "#/definitions/Persona"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Borrar persona con un dado ID",
+        "tags": [
+          "Personas"
+        ],
+        "responses": {
+          "200": {
+            "description": "Persona borrada",
+            "schema": {
+              "$ref": "#/definitions/Persona"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza persona con un ID determinado",
+        "tags": [
+          "Personas"
+        ],
+        "parameters": [
+          {
+            "name": "persona",
+            "in": "body",
+            "description": "Persona con nuevos valores",
+            "schema": {
+              "$ref": "#/definitions/Persona"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Persona actualizada",
+            "schema": {
+              "$ref": "#/definitions/Persona"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Persona": {
+      "required": [
+        "apellido"
+      ],
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "apellido": {
+          "type": "string"
+        }
+      }
+    },
+    "Personas": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Persona"
+      }
+    }
+  }
+}
