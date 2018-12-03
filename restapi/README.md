@@ -9,8 +9,9 @@ Usando Express 4.0 Router para crear una API
 
 ## Instalacion
 
+- Levantar Mongodb: `mongod --dbpath C:\MongoDB\data\db`
 - Instalar dependencias: `npm install`
 - Levantar server: `node server.js`
 
-## Testing the API
+## Testear API
 Usar [Postman](https://www.getpostman.com/)
