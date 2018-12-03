@@ -34,7 +34,7 @@ router.route('/personas')
 		
 		var persona = new Persona();		
 		persona.nombre = req.body.nombre;  
-
+		persona.apellido = req.body.apellido;
 		persona.save(function(err) {
 			if (err)
 				res.send(err);
@@ -71,6 +71,7 @@ router.route('/personas/:persona_id')
 			if (err)
 				res.send(err);
 			persona.nombre = req.body.nombre;
+			persona.apellido = req.body.apellido;
 			persona.save(function(err) {
 				if (err)
 					res.send(err);
